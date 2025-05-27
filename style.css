@@ -86,3 +86,16 @@ footer {
   background: #111;
   color: white;
 }
+
+.about-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex: 1 1 45%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
