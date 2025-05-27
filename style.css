@@ -19,3 +19,18 @@ nav a {
   margin: 0 10px;
   text-decoration: none;
 }
+
+section {
+  padding: 2rem;
+  background: white;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.project-card {
+  background: #eef;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
