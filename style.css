@@ -34,3 +34,10 @@ section {
   margin-bottom: 1rem;
   border-radius: 6px;
 }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: white;
+}
