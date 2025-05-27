@@ -18,32 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const navLinks = document.querySelectorAll("nav a");
-
-  const highlightNav = () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (window.scrollY >= sectionTop - 120) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  };
-
-  // Scroll trigger
-  window.addEventListener("scroll", () => {
-    fadeInOnScroll();
-    highlightNav();
-  });
-
-  // Initial run
+  // Initial check in case user loads the page halfway down
   fadeInOnScroll();
-  highlightNav();
+
+  // Trigger on scroll
+  window.addEventListener("scroll", fadeInOnScroll);
 });
