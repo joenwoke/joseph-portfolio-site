@@ -9,35 +9,44 @@
 </head>
 <body>
   <header>
-    <h1>Joseph Nwoke</h1>
-    <p>Web Developer & Game Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container header-content">
+      <img src="images/profile.jpg" alt="Joseph Nwoke" class="profile-img" />
+      <div>
+        <h1>Hi, I’m <span class="highlight">Joseph Nwoke</span></h1>
+        <p>Web Developer & Game Enthusiast based in Chicago.</p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="container">
     <h2>About Me</h2>
-    <p>I'm a student at Illinois Tech passionate about web development, gaming, and interactive tech.</p>
+    <p>I'm a student at Illinois Tech passionate about front-end development, games, and interactive technologies.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="container">
     <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Language Learning App</h3>
-      <p>A React-based app to help users practice language skills interactively.</p>
-    </div>
-    <div class="project-card">
-      <h3>Bitcoin Market Tracker</h3>
-      <p>Monitors live Bitcoin data using public APIs. Built with Python & Tkinter.</p>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/langapp.jpg" alt="Language App"/>
+        <h3>Language Learning App</h3>
+        <p>React-based app to help users practice language skills interactively.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/bitcoin.jpg" alt="Bitcoin App"/>
+        <h3>Bitcoin Market Tracker</h3>
+        <p>Tracks real-time Bitcoin prices using APIs. Built with Python & Tkinter.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="container">
     <h2>Contact</h2>
-    <p>Email: <a href="josephnwoke021@gmail.com">josephnwoke021@gmail.com</a></p>
+    <p>Email: <a href="mailto:joseph@example.com">joseph@example.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/josephnwoke" target="_blank">linkedin.com/in/josephnwoke</a></p>
   </section>
 
