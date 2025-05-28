@@ -126,3 +126,10 @@ footer {
   display: block;
   flex: 1 1 45%;
 }
+
+.project-link:hover .project-card {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
