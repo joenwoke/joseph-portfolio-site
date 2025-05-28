@@ -110,3 +110,11 @@ footer {
   gap: 1rem;
   margin-top: 1rem;
 }
+
+.skill {
+  padding: 0.75rem 1.5rem;
+  background-color: #89aacd;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
