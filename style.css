@@ -133,3 +133,27 @@ footer {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
+/* Sticky header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #111;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 1rem;
+}
+
+/* Desktop nav */
+#nav-menu {
+  display: flex;
+  gap: 1rem;
+}
