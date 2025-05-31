@@ -64,13 +64,21 @@ h1 .highlight {
   background: #111;
   color: white;
   padding: 0.8rem 1rem;
-  display: none;
+  display: flex;
+  justify-content: center;
   z-index: 999;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
 }
 
 .sticky-nav.visible {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .nav-container {
@@ -82,9 +90,11 @@ h1 .highlight {
 }
 
 .nav-container .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 800;
+  font-size: 1.5rem; /* Increase size */
+  letter-spacing: 1px;
   color: #00d4ff;
+  transition: font-size 0.3s ease, transform 0.3s ease;
 }
 
 .main-nav a {
