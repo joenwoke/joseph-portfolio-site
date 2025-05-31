@@ -87,6 +87,7 @@ h1 .highlight {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
 }
 
 .nav-container .logo {
