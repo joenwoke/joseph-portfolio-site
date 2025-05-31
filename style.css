@@ -55,6 +55,14 @@ h1 .highlight {
   color: #00d4ff;
 }
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00d4ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* Sticky Nav */
 .sticky-nav {
   position: fixed;
@@ -98,15 +106,34 @@ h1 .highlight {
   transition: font-size 0.3s ease, transform 0.3s ease;
 }
 
-.main-nav a {
-  margin-left: 1.5rem;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+.main-nav {
+  display: flex;
+  gap: 3rem;
 }
 
-.main-nav a:hover {
-  color: #00d4ff;
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00d4ff;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
 
 /* Sections */
