@@ -1,3 +1,5 @@
+
+/* Reset & Global Styles */
 * {
   box-sizing: border-box;
 }
@@ -13,16 +15,11 @@ body {
   color: #222;
 }
 
-header {
+/* Hero Header */
+.hero-header {
   background: #111;
   color: white;
   padding: 3rem 1rem;
-}
-
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
 }
 
 .header-content {
@@ -30,6 +27,8 @@ header {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .profile-img {
@@ -41,14 +40,14 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-nav a {
+.hero-nav a {
   margin: 0 10px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.hero-nav a:hover {
   color: #00d4ff;
 }
 
@@ -56,52 +55,67 @@ h1 .highlight {
   color: #00d4ff;
 }
 
-section {
-  padding: 2rem 0;
-}
-
-.project-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.project-card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  flex: 1 1 45%;
-  transition: transform 0.2s ease-in-out;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
+/* Sticky Nav */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #111;
   color: white;
+  padding: 0.8rem 1rem;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.about-card {
+.sticky-nav.visible {
+  display: block;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #00d4ff;
+}
+
+.main-nav a {
+  margin-left: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: #00d4ff;
+}
+
+/* Sections */
+section {
+  padding: 2rem 0;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-card, .project-card {
   background: #fff;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  flex: 1 1 45%;
-  transition: transform 0.2s ease-in-out;
+  margin-bottom: 2rem;
 }
 
-.about-card:hover {
+.about-card:hover, .project-card:hover {
   transform: translateY(-5px);
+  transition: 0.3s;
 }
 
 .skills-grid {
@@ -120,10 +134,20 @@ footer {
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 .project-link {
   text-decoration: none;
   color: inherit;
-  display: block;
   flex: 1 1 45%;
 }
 
@@ -134,26 +158,9 @@ footer {
   cursor: pointer;
 }
 
-/* Sticky header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #111;
-}
-
-/* Hamburger menu icon */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  margin-left: auto;
+footer {
+  text-align: center;
   padding: 1rem;
-}
-
-/* Desktop nav */
-#nav-menu {
-  display: flex;
-  gap: 1rem;
+  background: #111;
+  color: white;
 }
