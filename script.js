@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll("section");
   const stickyNav = document.querySelector(".sticky-nav");
+  const header = document.querySelector(".hero-header");
 
-  // Fade-in animation for sections
+  // Prepare all sections for fade-in animation
   sections.forEach(section => {
     section.style.opacity = 0;
     section.style.transform = "translateY(40px)";
@@ -19,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Show sticky navbar after scrolling past header
   const toggleStickyNav = () => {
-    const header = document.querySelector(".hero-header");
     const headerHeight = header.offsetHeight;
     if (window.scrollY > headerHeight - 20) {
       stickyNav.classList.add("visible");
@@ -30,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Initial load
+  // Run on initial load
   fadeInOnScroll();
   toggleStickyNav();
 
-  // Event listeners
+  // Attach scroll event
   window.addEventListener("scroll", () => {
     fadeInOnScroll();
     toggleStickyNav();
