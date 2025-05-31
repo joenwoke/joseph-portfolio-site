@@ -19,6 +19,16 @@ body {
   background: #111;
   color: white;
   padding: 3rem 1rem;
+  width: 100%;
+}
+
+.hero-header .header-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .header-content {
@@ -73,7 +83,6 @@ h1 .highlight {
   padding: 0.8rem 1rem;
   z-index: 999;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(-100%);
@@ -135,7 +144,7 @@ h1 .highlight {
 
 /* Sections */
 section {
-  padding: 2rem 0;
+  padding: 2rem 0; /* Increased spacing to avoid section overlap */
   max-width: 1000px;
   margin: auto;
   scroll-margin-top: 80px;
@@ -208,4 +217,9 @@ footer {
   padding: 1rem;
   background: #111;
   color: white;
+}
+
+/* About section custom spacing fix */
+#about h2 + hr {
+  display: none; /* Remove the extra <hr> directly below About Me */
 }
