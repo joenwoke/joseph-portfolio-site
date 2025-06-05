@@ -223,3 +223,14 @@ footer {
 #about h2 + hr {
   display: none; 
 }
+
+.project-buttons {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid #111;
+}
