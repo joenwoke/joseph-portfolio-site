@@ -233,4 +233,17 @@ footer {
   display: inline-block;
   padding: 0.6rem 1.4rem;
   border: 2px solid #111;
+  border-radius: 30px;
+  font-weight: 500;
+  color: #111;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.project-btn:hover {
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
 }
