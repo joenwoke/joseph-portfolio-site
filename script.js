@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector(".hero-header");
   const navLinks = document.querySelectorAll(".main-nav a");
 
-  // Fade-in animation setup for each section
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobileNav");
+  const closeBtn = document.getElementById("closeBtn");
+
+  // Fade-in animation for each section
   sections.forEach(section => {
     section.style.opacity = 0;
     section.style.transform = "translateY(40px)";
@@ -47,12 +51,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Initial load
+  // Show mobile nav
+  hamburger.addEventListener("click", () => {
+    mobileNav.style.display = "flex";
+    document.body.style.overflow = "hidden"; // prevent scroll behind overlay
+  });
+
+  // Hide mobile nav
+  closeBtn.addEventListener("click", () => {
+    mobileNav.style.display = "none";
+    document.body.style.overflow = ""; // restore scroll
+  });
+
+  // Close mobile nav when clicking a link
+  mobileNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.style.display = "none";
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Initial triggers
   fadeInOnScroll();
   toggleStickyNav();
   highlightCurrentNav();
 
-  // Event listeners
+  // Scroll triggers
   window.addEventListener("scroll", () => {
     fadeInOnScroll();
     toggleStickyNav();
