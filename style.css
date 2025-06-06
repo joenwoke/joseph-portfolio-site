@@ -330,4 +330,8 @@ footer {
   display: none;
   flex-direction: column;
   gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 10000;
 }
