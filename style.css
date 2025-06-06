@@ -367,3 +367,14 @@ footer {
   gap: 2rem;
   align-items: center;
 }
+
+.mobile-nav a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mobile-nav a:hover {
+  color: #00d4ff;
+}
