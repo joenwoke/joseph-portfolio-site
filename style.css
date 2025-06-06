@@ -360,3 +360,10 @@ footer {
   z-index: 9999;
   padding: 2rem;
 }
+
+.mobile-nav nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
