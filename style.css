@@ -378,3 +378,26 @@ footer {
 .mobile-nav a:hover {
   color: #00d4ff;
 }
+
+/* CLOSE BUTTON INSIDE OVERLAY */
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE RULES TO ENABLE HAMBURGER */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
