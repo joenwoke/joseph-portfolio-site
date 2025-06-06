@@ -324,3 +324,10 @@ footer {
     font-size: 1.2rem;
   }
 }
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
