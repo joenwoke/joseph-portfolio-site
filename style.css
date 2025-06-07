@@ -10,7 +10,9 @@ body {
   font-family: 'Inter', sans-serif;
   background: #f8f9fa;
   color: #222;
+  padding: 0 1rem;
 }
+
 /* Hero Header */
 .hero-header {
   background: #111;
@@ -61,6 +63,7 @@ h1 .highlight {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 /* Sticky Nav */
 .sticky-nav {
   position: fixed;
@@ -122,6 +125,7 @@ h1 .highlight {
 .main-nav a.active::after {
   width: 100%;
 }
+
 /* Sections */
 section {
   padding: 2rem 0; 
@@ -214,6 +218,7 @@ footer {
   color: #fff;
   cursor: pointer;
 }
+
 /* Mobile Navigation */
 .hamburger {
   display: none;
@@ -231,7 +236,6 @@ footer {
   border-radius: 2px;
   transition: 0.3s ease;
 }
-
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -248,15 +252,12 @@ footer {
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
 }
-
-/* Mobile nav content styling */
 .mobile-nav nav {
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
   width: 100%;
 }
-
 .mobile-nav a {
   color: white;
   font-size: 1.2rem;
@@ -266,12 +267,9 @@ footer {
   width: 100%;
   text-align: left;
 }
-
 .mobile-nav a:hover {
   color: #00d4ff;
 }
-
-/* Close button styling */
 .close-btn {
   position: absolute;
   top: 1.5rem;
