@@ -51,23 +51,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Show mobile nav by adding class
+  // Show mobile nav
   hamburger.addEventListener("click", () => {
     mobileNav.classList.add("active");
     hamburger.classList.add("open");
+    closeBtn.style.display = "block";
     document.body.style.overflow = "hidden";
   });
-  
+
+  // Close mobile nav
   closeBtn.addEventListener("click", () => {
     mobileNav.classList.remove("active");
     hamburger.classList.remove("open");
+    closeBtn.style.display = "none";
     document.body.style.overflow = "";
   });
 
-  // Close mobile nav on nav link click
+  // Close nav on link click
   mobileNav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       mobileNav.classList.remove("active");
+      hamburger.classList.remove("open");
+      closeBtn.style.display = "none";
       document.body.style.overflow = "";
     });
   });
