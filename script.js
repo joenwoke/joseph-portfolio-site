@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const highlightCurrentNav = () => {
     let current = "";
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
+      const sectionTop = section.offsetTop - 120;
       if (scrollY >= sectionTop) {
         current = section.getAttribute("id");
       }
@@ -51,22 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Show mobile nav
+  // Open mobile nav
   hamburger.addEventListener("click", () => {
-    mobileNav.style.display = "flex";
-    document.body.style.overflow = "hidden"; // prevent scroll behind overlay
+    mobileNav.classList.add("open");
+    document.body.style.overflow = "hidden"; // lock scroll
   });
 
-  // Hide mobile nav
+  // Close mobile nav
   closeBtn.addEventListener("click", () => {
-    mobileNav.style.display = "none";
-    document.body.style.overflow = ""; // restore scroll
+    mobileNav.classList.remove("open");
+    document.body.style.overflow = "";
   });
 
-  // Close mobile nav when clicking a link
+  // Close mobile nav when clicking a nav link
   mobileNav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      mobileNav.style.display = "none";
+      mobileNav.classList.remove("open");
       document.body.style.overflow = "";
     });
   });
