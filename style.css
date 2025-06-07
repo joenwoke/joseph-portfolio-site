@@ -2,18 +2,15 @@
 * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #f8f9fa;
   color: #222;
 }
-
 /* Hero Header */
 .hero-header {
   background: #111;
@@ -21,7 +18,6 @@ body {
   padding: 3rem 1rem;
   width: 100%;
 }
-
 .hero-header .header-content {
   display: flex;
   align-items: center;
@@ -30,7 +26,6 @@ body {
   max-width: 1000px;
   margin: auto;
 }
-
 .header-content {
   display: flex;
   align-items: center;
@@ -39,7 +34,6 @@ body {
   max-width: 1000px;
   margin: auto;
 }
-
 .profile-img {
   width: 150px;
   height: 150px;
@@ -48,22 +42,18 @@ body {
   border: 4px solid #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-
 .hero-nav a {
   margin: 0 10px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-
 .hero-nav a:hover {
   color: #00d4ff;
 }
-
 h1 .highlight {
   color: #00d4ff;
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -71,7 +61,6 @@ h1 .highlight {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 /* Sticky Nav */
 .sticky-nav {
   position: fixed;
@@ -88,13 +77,11 @@ h1 .highlight {
   transform: translateY(-100%);
   transition: all 0.3s ease;
 }
-
 .sticky-nav.visible {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -103,12 +90,10 @@ h1 .highlight {
   align-items: center;
   padding: 0 2rem;
 }
-
 .main-nav {
   display: flex;
   gap: 2rem;
 }
-
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -118,7 +103,6 @@ h1 .highlight {
   padding: 0.5rem 0;
   transition: color 0.3s ease;
 }
-
 .main-nav a::after {
   content: "";
   position: absolute;
@@ -129,19 +113,15 @@ h1 .highlight {
   background-color: #00d4ff;
   transition: width 0.3s ease;
 }
-
 .main-nav a:hover::after {
   width: 100%;
 }
-
 .main-nav a.active {
   color: #00d4ff;
 }
-
 .main-nav a.active::after {
   width: 100%;
 }
-
 /* Sections */
 section {
   padding: 2rem 0; 
@@ -149,7 +129,6 @@ section {
   margin: auto;
   scroll-margin-top: 80px;
 }
-
 section h2 {
   font-size: 2.2rem;
   font-weight: 700;
@@ -158,7 +137,6 @@ section h2 {
   padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
 }
-
 .about-card {
   background: #fff;
   padding: 1rem;
@@ -166,25 +144,22 @@ section h2 {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   margin-bottom: 2rem;
 }
-
 .project-card {
   background: #fff;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   margin-bottom: 2rem;
-  max-width: 420px; /* keeps it neat */
+  max-width: 420px;
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .about-card:hover, .project-card:hover {
   transform: translateY(-5px);
   transition: 0.3s;
 }
-
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -192,7 +167,6 @@ section h2 {
   margin-top: 1rem;
   color: #f0f9ff;
 }
-
 .skill {
   padding: 0.75rem 1.5rem;
   background-color: #0369a1;
@@ -200,49 +174,29 @@ section h2 {
   font-weight: 600;
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
-
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
-
 .project-card img {
   width: 100%;
   border-radius: 8px;
 }
-
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  flex: 1 1 45%;
-}
-
-.project-link:hover .project-card {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  transform: translateY(-6px);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
 footer {
   text-align: center;
   padding: 1rem;
   background: #111;
   color: white;
 }
-
-/* About section custom spacing fix */
 #about h2 + hr {
   display: none; 
 }
-
 .project-buttons {
   margin-top: 1rem;
   text-align: center;
 }
-
 .project-btn {
   display: inline-block;
   padding: 0.6rem 1.4rem;
@@ -255,77 +209,12 @@ footer {
   transition: all 0.3s ease;
   font-family: inherit;
 }
-
 .project-btn:hover {
   background-color: #111;
   color: #fff;
   cursor: pointer;
 }
-
-/* - RESPONSIVE DESIGN - */
-@media (max-width: 1023px) {
-  .project-grid {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .project-link, .project-card {
-    flex: 1 1 100%;
-  }
-
-  .skills-grid {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 767px) {
-  body {
-    padding: 0 1rem;
-  }
-
-  .hero-header, .sticky-nav {
-    text-align: center;
-  }
-
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-nav {
-    margin-top: 1rem;
-  }
-
-  .main-nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .project-buttons {
-    justify-content: center;
-  }
-
-  .project-btn {
-    width: 100%;
-    max-width: 200px;
-    text-align: center;
-  }
-
-  .skills-grid {
-    flex-direction: column;
-  }
-
-  section h2 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .logo {
-    font-size: 1.2rem;
-  }
-}
-
-/* Hamburger icon */
+/* Mobile Navigation */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -335,7 +224,6 @@ footer {
   border: none;
   justify-content: center;
 }
-
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -343,8 +231,6 @@ footer {
   border-radius: 2px;
   transition: 0.3s ease;
 }
-
-/* MOBILE NAV OVERLAY */
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -362,29 +248,25 @@ footer {
   padding: 2rem 1.5rem;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
 }
-
+.mobile-nav.active {
+  display: flex;
+}
 .mobile-nav nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
 }
-
 .mobile-nav a {
   color: white;
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 500;
   margin: 1rem 0;
-  width: 100%;
-  text-align: left;
 }
-
 .mobile-nav a:hover {
   color: #00d4ff;
 }
-
-/* CLOSE BUTTON INSIDE OVERLAY */
 .close-btn {
   position: absolute;
   top: 1.5rem;
@@ -395,23 +277,11 @@ footer {
   color: white;
   cursor: pointer;
 }
-
-#closeBtn {
-  align-self: flex-end;
-  font-size: 1.5rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: #fff;
-  margin-bottom: 2rem;
-}
-
-/* RESPONSIVE RULES TO ENABLE HAMBURGER */
+/* Responsive Styles */
 @media (max-width: 767px) {
   .main-nav {
     display: none;
   }
-
   .hamburger {
     display: flex;
     position: absolute;
