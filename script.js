@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const highlightCurrentNav = () => {
     let current = "";
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
+      const sectionTop = section.offsetTop - 100;
       if (scrollY >= sectionTop) {
         current = section.getAttribute("id");
       }
@@ -51,32 +51,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Open mobile nav
+  // Show mobile nav by adding class
   hamburger.addEventListener("click", () => {
-    mobileNav.classList.add("open");
-    document.body.style.overflow = "hidden"; // lock scroll
+    mobileNav.classList.add("active");
+    document.body.style.overflow = "hidden"; // Lock scroll
   });
 
-  // Close mobile nav
+  // Hide mobile nav by removing class
   closeBtn.addEventListener("click", () => {
-    mobileNav.classList.remove("open");
-    document.body.style.overflow = "";
+    mobileNav.classList.remove("active");
+    document.body.style.overflow = ""; // Restore scroll
   });
 
-  // Close mobile nav when clicking a nav link
+  // Close mobile nav on nav link click
   mobileNav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      mobileNav.classList.remove("open");
+      mobileNav.classList.remove("active");
       document.body.style.overflow = "";
     });
   });
 
-  // Initial triggers
+  // Initial load
   fadeInOnScroll();
   toggleStickyNav();
   highlightCurrentNav();
 
-  // Scroll triggers
+  // On scroll
   window.addEventListener("scroll", () => {
     fadeInOnScroll();
     toggleStickyNav();
