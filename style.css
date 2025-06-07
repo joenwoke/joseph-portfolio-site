@@ -238,23 +238,22 @@ footer {
   position: fixed;
   top: 0;
   right: 0;
-  width: 260px;
+  width: 80%; 
+  max-width: 280px;
   height: 100%;
   background-color: #111;
   transform: translateX(100%);
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 2rem 1.5rem;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
 }
 .mobile-nav.active {
   transform: translateX(0);
-  opacity: 1;
 }
 .mobile-nav nav {
   display: flex;
