@@ -269,12 +269,12 @@ footer {
 /* Close button */
 .close-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.25rem;
+  left: 1.25rem;
   font-size: 2rem;
-  color: white;
   background: none;
   border: none;
+  color: white;
   cursor: pointer;
   z-index: 1002;
 }
