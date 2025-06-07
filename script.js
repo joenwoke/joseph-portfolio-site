@@ -54,11 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show mobile nav by adding class
   hamburger.addEventListener("click", () => {
     mobileNav.classList.add("active");
+    hamburger.classList.add("open");
     document.body.style.overflow = "hidden";
   });
   
   closeBtn.addEventListener("click", () => {
     mobileNav.classList.remove("active");
+    hamburger.classList.remove("open");
     document.body.style.overflow = "";
   });
 
