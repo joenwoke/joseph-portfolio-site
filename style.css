@@ -238,10 +238,10 @@ footer {
   position: fixed;
   top: 0;
   right: 0;
-  width: 80%; 
-  max-width: 280px;
-  height: 100%;
-  background-color: #111;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  background-color: rgba(17, 17, 17, 0.98);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -249,7 +249,7 @@ footer {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 2rem 1.5rem;
-  z-index: 1000;
+  z-index: 9999;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
 }
 .mobile-nav.active {
@@ -264,7 +264,7 @@ footer {
 }
 .mobile-nav a {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-decoration: none;
   font-weight: 500;
   padding: 0.75rem 0;
@@ -279,14 +279,14 @@ footer {
 /* Close button */
 .close-btn {
   position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
+  top: 1.5rem;
+  right: 1.5rem;
   font-size: 2rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  z-index: 1002;
+  z-index: 10000;
 }
 
 /* Responsive tweaks */
