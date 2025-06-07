@@ -238,20 +238,23 @@ footer {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
-  width: 280px;
+  width: 260px;
+  height: 100%;
   background-color: #111;
-  display: none;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 2rem 1.5rem;
-  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
 }
 .mobile-nav.active {
-  display: flex;
+  transform: translateX(0);
+  opacity: 1;
 }
 .mobile-nav nav {
   display: flex;
