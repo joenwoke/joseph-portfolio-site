@@ -54,13 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show mobile nav by adding class
   hamburger.addEventListener("click", () => {
     mobileNav.classList.add("active");
-    document.body.style.overflow = "hidden"; // Lock scroll
+    document.body.style.overflow = "hidden";
   });
-
-  // Hide mobile nav by removing class
+  
   closeBtn.addEventListener("click", () => {
     mobileNav.classList.remove("active");
-    document.body.style.overflow = ""; // Restore scroll
+    document.body.style.overflow = "";
   });
 
   // Close mobile nav on nav link click
