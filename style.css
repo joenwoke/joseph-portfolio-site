@@ -316,3 +316,42 @@ footer {
     max-width: 200px;
   }
 }
+
+/* Contact Section Improvements */
+.contact-section {
+  padding: 3rem 1rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: #00bcd4;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  color: #0369a1;
+}
