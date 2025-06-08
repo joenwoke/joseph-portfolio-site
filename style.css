@@ -359,3 +359,12 @@ footer {
 #contact {
   min-height: 80vh;
 }
+
+.contact-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 0;
+  vertical-align: middle;
+  margin-top: 1px;
+}
