@@ -315,6 +315,10 @@ footer {
     width: 100%;
     max-width: 200px;
   }
+
+  #contact {
+    padding-bottom: 1rem; 
+  }
 }
 
 /* Contact Section Improvements */
