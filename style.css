@@ -317,6 +317,7 @@ footer {
   }
 
   #contact {
+    min-height: unset !important;
     padding-bottom: 1rem; 
   }
 }
