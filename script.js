@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const highlightCurrentNav = () => {
     let current = "";
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
+      const sectionTop = section.offsetTop - window.innerHeight / 2;
       if (scrollY >= sectionTop) {
         current = section.getAttribute("id");
       }
