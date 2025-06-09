@@ -357,7 +357,9 @@ footer {
 }
 
 #contact {
-  min-height: 80vh;
+  padding: 3rem 1rem;
+  scroll-margin-top: 80px; /* ensures smooth scroll lands right */
+  min-height: calc(100vh - 190px); /* full viewport height minus header/footer */
 }
 
 .contact-item img {
