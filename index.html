@@ -2,149 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Joseph Nwoke portfolio landing page." />
   <title>Joseph Nwoke | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Joseph Nwoke home">
+      <span class="brand-mark">JN</span>
+      <span>Joseph Nwoke</span>
+    </a>
 
-  <!-- HERO HEADER (Home) -->
-  <header class="hero-header" id="home">
-    <div class="container header-content">
-      <img src="images/profile.jpg" alt="Joseph Nwoke" class="profile-img" />
-      <div>
-        <h1><span class="highlight">Joseph Nwoke</span></h1>
-        <p>IT & Game Design Enthusiast creating engaging digital experiences</p>
-        <nav class="hero-nav">
-          <a href="#home">Home</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </div>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="experience.html" data-nav="experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- STICKY NAV on scroll -->
-  <div class="sticky-nav" id="stickyNav">
-    <div class="nav-container">
-      <div class="logo">Joseph Nwoke</div>
-
-      <!-- Hamburger Icon -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- Desktop Navigation-->
-      <nav class="main-nav">
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-
-    <!-- Full screen mobile menu overlay-->
-    <div class="mobile-nav" id="mobileNav">
-      <button class="close-btn" id="closeBtn">&times;</button>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </div>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="container">
-    <div class="about-card">
-      <h2>About Me</h2>
-      <hr />
-      <p>Hi!, I'm Joseph — a Cybersecurity & Information Technology and Mangement student at Illinois Tech, passionate about building interactive and user-centered digital experiences.</p>
-      <p>Currently expanding into React, TypeScript, Backend development and frameworks. I am also exploring game development and excited to learn how to bring immersive, interactive ideas to life.</p>
-      <p>Outside of coding, I enjoy gaming, soccer, and experimenting with app concepts that combine creativity with functionality. Also a huge FC Barcelona fan.</p>
-      <p>Open to internship opportunities or collaborations that challenge me and help me grow as a developer and game creator.</p>
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Python</div>
-      <div class="skill">Java</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">SQL</div>
-      <div class="skill">React</div>
-      <div class="skill">Game Development (Exploring)</div>
-    </div>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="images/sunapp.jpg" alt="Sunrise Sunset App"/>
-        <h3>Sunrise/Sunset Dashboard</h3>
-        <p>A web app that displays real-time sunrise, sunset, and solar noon data using external APIs.</p>
-        <p>Built with HTML, CSS, JavaScript, and JSON.</p>
-        <div class="project-buttons">
-            <a href="https://joenwoke.github.io/ITMD-441-Lab-6/" target="_blank" class="project-btn">Visit Website</a>
+  <main>
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Cybersecurity, IT, and interactive web development</p>
+        <h1>Building practical digital experiences with a security-minded edge.</h1>
+        <p class="hero-copy">
+          I am Joseph Nwoke, an Illinois Tech student focused on cybersecurity, information technology, and software projects that turn useful ideas into polished products.
+        </p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="projects.html">View Projects</a>
+          <a class="btn btn-secondary" href="#resume">Download Resume</a>
+          <a class="btn btn-ghost" href="#contact">Contact Me</a>
         </div>
       </div>
 
-      <div class="project-card">
-        <img src="images/bitcoin.jpg" alt="Bitcoin Tracker Screenshot"/>
-        <h3>Bitcoin Market Tracker</h3>
-        <p>Tracks real-time Bitcoin prices using APIs and displays live data inside a graphical user interface (GUI).</p>
-        <p>Built with Python, Tkinter, REST APIs, JSON, Git.</p>
-        <div class="project-buttons">
-          <a href="https://github.com/mpervaiz25/ITMS_448_Open_Source_app" target="_blank" class="project-btn">View on GitHub</a>
+      <div class="hero-panel" aria-label="Joseph Nwoke profile summary">
+        <img class="profile-photo" src="images/profile.jpg" alt="Joseph Nwoke" />
+        <div class="profile-fallback" aria-hidden="true">JN</div>
+        <div class="hero-stat-grid">
+          <div>
+            <span class="stat-number">IT</span>
+            <span class="stat-label">Cybersecurity focus</span>
+          </div>
+          <div>
+            <span class="stat-number">Web</span>
+            <span class="stat-label">Frontend projects</span>
+          </div>
+          <div>
+            <span class="stat-number">Game</span>
+            <span class="stat-label">Design interests</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="container contact-section">
-    <h2>Contact</h2>
-    <div class="contact-card">
-      <div class="contact-item">
-        <i class="fas fa-envelope contact-icon"></i>
-        <a href="mailto:josephnwoke021@gmail.com">josephnwoke021@gmail.com</a>
+    <section class="section two-column" id="about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Curious developer with a hands-on IT foundation.</h2>
       </div>
-      <div class="contact-item">
-        <i class="fab fa-linkedin contact-icon"></i>
-        <a href="https://linkedin.com/in/josephnwoke" target="_blank">linkedin.com/in/josephnwoke</a>
+      <div class="section-copy">
+        <p>
+          I study Cybersecurity, Information Technology, and Management at Illinois Tech, where I am building a foundation in systems, programming, and secure technology practices.
+        </p>
+        <p>
+          My current work blends web development, API-driven applications, and practical tools. I am also expanding into React, TypeScript, backend development, and game development.
+        </p>
+        <p>
+          Outside of coding, I enjoy gaming, soccer, and experimenting with app concepts that combine creativity with functionality.
+        </p>
       </div>
-      <div class="contact-item">
-        <i class="fab fa-github contact-icon"></i>
-        <a href="https://github.com/joenwoke" target="_blank">github.com/joenwoke</a>
-      </div>
-      <div class="contact-item">
-        <img src="images/x-logo.png" alt="X logo"/>
-        <a href="https://x.com/thejosephnwoke" target="_blank">x.com/thejosephnwoke</a>
-      </div>
-      <div class="contact-item">
-        <i class="fab fa-instagram contact-icon"></i>
-        <a href="https://www.instagram.com/thejosephnwoke/" target="_blank">instagram.com/thejosephnwoke</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Joseph Nwoke</p>
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>Grouped by how I use them.</h2>
+      </div>
+
+      <div class="skills-layout">
+        <article class="skill-card">
+          <h3>Frontend</h3>
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Programming</h3>
+          <ul class="tag-list">
+            <li>Python</li>
+            <li>Java</li>
+            <li>SQL</li>
+            <li>JSON</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Tools & Platforms</h3>
+          <ul class="tag-list">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>REST APIs</li>
+            <li>Tkinter</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Learning Next</h3>
+          <ul class="tag-list">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Backend Development</li>
+            <li>Game Development</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section resume-section" id="resume">
+      <div>
+        <p class="eyebrow">Resume</p>
+        <h2>Want the quick version?</h2>
+        <p>Download my resume or visit the experience page for a structured look at my coursework, projects, and professional interests.</p>
+      </div>
+      <div class="resume-actions">
+        <a class="btn btn-primary" href="Joseph-Nwoke-Resume.pdf" download>Download Resume</a>
+        <a class="btn btn-secondary" href="experience.html">View Experience</a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s connect.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:josephnwoke021@gmail.com">
+          <span>Email</span>
+          <strong>josephnwoke021@gmail.com</strong>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/josephnwoke" target="_blank" rel="noopener">
+          <span>LinkedIn</span>
+          <strong>linkedin.com/in/josephnwoke</strong>
+        </a>
+        <a class="contact-card" href="https://github.com/joenwoke" target="_blank" rel="noopener">
+          <span>GitHub</span>
+          <strong>github.com/joenwoke</strong>
+        </a>
+        <a class="contact-card" href="https://x.com/thejosephnwoke" target="_blank" rel="noopener">
+          <span>X</span>
+          <strong>x.com/thejosephnwoke</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Joseph Nwoke. Built with HTML, CSS, and JavaScript.</p>
   </footer>
 </body>
 </html>
