@@ -506,7 +506,7 @@ h3 {
 
 .project-card {
   display: grid;
-  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
   align-items: center;
   overflow: hidden;
 }
@@ -515,16 +515,20 @@ h3 {
   display: grid;
   place-items: center;
   align-self: stretch;
-  min-height: clamp(24rem, 35vw, 31rem);
+  min-height: clamp(28rem, 42vw, 34rem);
+  padding: 1rem;
   background: linear-gradient(135deg, rgba(8, 145, 178, 0.16), rgba(18, 41, 54, 0.08));
   overflow: hidden;
 }
 
 .project-media img {
-  width: 100%;
+  width: auto;
   height: 100%;
+  max-width: 100%;
   object-fit: contain;
   background: #0d0d14;
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(16, 32, 42, 0.18);
 }
 
 .project-placeholder {
@@ -817,8 +821,8 @@ h3 {
   .project-media,
   .project-media img,
   .project-placeholder {
-    min-height: 18rem;
-    height: 18rem;
+    min-height: 24rem;
+    height: 24rem;
   }
 
   .project-meta {
