@@ -129,11 +129,12 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
   align-items: center;
-  gap: 3rem;
-  min-height: calc(100vh - 5rem);
-  padding-top: 4rem;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  min-height: min(760px, calc(100vh - 4.5rem));
+  padding-top: clamp(2.25rem, 5vw, 3.25rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .eyebrow {
@@ -153,11 +154,12 @@ p {
 }
 
 h1 {
-  max-width: 850px;
-  margin-bottom: 1.25rem;
-  font-size: clamp(2.6rem, 7vw, 5.65rem);
-  line-height: 0.98;
+  max-width: 760px;
+  margin-bottom: 1rem;
+  font-size: clamp(2.45rem, 5.5vw, 4.6rem);
+  line-height: 1.04;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 h2 {
@@ -182,7 +184,8 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 700px;
+  max-width: 640px;
+  text-wrap: pretty;
 }
 
 .button-row,
@@ -190,7 +193,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .btn {
@@ -242,8 +245,9 @@ h3 {
 
 .profile-photo {
   width: 100%;
-  aspect-ratio: 1;
-  min-height: 21rem;
+  aspect-ratio: 4 / 5;
+  min-height: 0;
+  max-height: 29rem;
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
@@ -257,8 +261,9 @@ h3 {
 .profile-fallback {
   display: grid;
   place-items: center;
-  aspect-ratio: 1;
-  min-height: 21rem;
+  aspect-ratio: 4 / 5;
+  min-height: 0;
+  max-height: 29rem;
   color: #d9fbff;
   background:
     linear-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px),
@@ -522,6 +527,12 @@ h3 {
 
   .hero {
     min-height: auto;
+    align-items: start;
+  }
+
+  h1 {
+    max-width: 680px;
+    font-size: clamp(2.35rem, 8vw, 4rem);
   }
 
   .skills-layout,
@@ -574,6 +585,20 @@ h3 {
 
   .hero {
     padding-top: 3rem;
+    padding-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: clamp(2.15rem, 11vw, 3.25rem);
+    line-height: 1.08;
+  }
+
+  .hero-copy,
+  .page-hero p,
+  .section-copy p,
+  .resume-section p {
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
   .hero-stat-grid,
@@ -582,8 +607,9 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .profile-photo,
   .profile-fallback {
-    min-height: 16rem;
+    max-height: 25rem;
   }
 
   .button-row,
