@@ -255,11 +255,9 @@ h3 {
 }
 
 .profile-photo {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  min-height: 0;
-  max-height: 25rem;
-  object-fit: cover;
+  height: auto;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
 }
@@ -885,7 +883,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .profile-photo,
   .profile-fallback {
     max-height: 22rem;
   }
